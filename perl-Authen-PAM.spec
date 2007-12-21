@@ -11,6 +11,7 @@ Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
 Source0:	%{module}-%{version}.tar.bz2
 BuildRequires:	pam-devel perl-devel
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The Authen::PAM module provides a Perl interface to the PAM library.
