@@ -1,6 +1,6 @@
 %define module	Authen-PAM
 %define version 0.16
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary:	Perl interface to the PAM library
 Name: 		perl-%{module}
