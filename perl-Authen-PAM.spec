@@ -1,17 +1,19 @@
-%define module	Authen-PAM
-%define version 0.16
-%define release %mkrel 6
+%define upstream_name	 Authen-PAM
+%define upstream_version 0.16
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl interface to the PAM library
-Name: 		perl-%{module}
-Version: 	%{version}
-Release: 	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source0:	%{module}-%{version}.tar.bz2
-BuildRequires:	pam-devel perl-devel
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/Authen/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires:	pam-devel
+BuildRequires:  perl-devel
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{version}
 
 %description
 The Authen::PAM module provides a Perl interface to the PAM library.
@@ -19,7 +21,7 @@ The only difference with the standard PAM interface is that the perl
 one is simpler.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -38,5 +40,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/*
 %{perl_vendorarch}/auto/Authen/*
 %{perl_vendorarch}/Authen/*
-
-
