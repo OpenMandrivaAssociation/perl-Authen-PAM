@@ -4,11 +4,12 @@
 Summary:	Perl interface to the PAM library
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	16
+Release:	17
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		http://metacpan.org/pod/Authen::PAM
 Source0:	http://www.cpan.org/modules/by-module/Authen/%{upstream_name}-%{upstream_version}.tar.bz2
+Patch0:		Authen-PAM-0.16-fix-build.patch
 BuildRequires:	pam-devel
 BuildRequires:	perl-devel
 
@@ -18,7 +19,7 @@ The only difference with the standard PAM interface is that the perl
 one is simpler.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -32,4 +33,3 @@ one is simpler.
 %{perl_vendorarch}/auto/Authen/*
 %{perl_vendorarch}/Authen/*
 %{_mandir}/man3/*
-
