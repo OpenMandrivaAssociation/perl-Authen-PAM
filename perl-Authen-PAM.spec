@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	19
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Authen::PAM
+Url:		https://metacpan.org/pod/Authen::PAM
 Source0:	http://www.cpan.org/modules/by-module/Authen/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:		Authen-PAM-0.16-fix-build.patch
 BuildRequires:	pam-devel
