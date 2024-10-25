@@ -4,7 +4,7 @@
 Summary:	Perl interface to the PAM library
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	19
+Release:	20
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Authen::PAM
