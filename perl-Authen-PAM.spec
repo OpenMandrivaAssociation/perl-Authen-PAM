@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/Authen::PAM
 Source0:	http://www.cpan.org/modules/by-module/Authen/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:		Authen-PAM-0.16-fix-build.patch
+BuildRequires:	make
 BuildRequires:	pam-devel
 BuildRequires:	perl-devel
 
